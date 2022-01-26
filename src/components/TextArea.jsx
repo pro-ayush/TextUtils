@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+import Preview  from "./Preview";
 
 export default function TextArea(props) {
 
@@ -82,6 +82,12 @@ export default function TextArea(props) {
           Remove Extra Spaces
         </button>
       </div>
+
+
+
+      {/* Preview Tab  */}
+
+      <Preview Ptext={textValue} mode={props.mode} bgColor={props.bgColor} txtColor= {props.txtColor}/>
     </div>
   );
 }

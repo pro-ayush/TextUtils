@@ -1,6 +1,9 @@
 import React from 'react';
+import Button from './button';
 
 export default function Navbar(props) {
+
+    let colorArr = ['danger', 'primary', 'success', 'warning']
 
     //Resolve this after coming back
     
@@ -22,6 +25,10 @@ export default function Navbar(props) {
                     <a className="nav-link" href="/">Link</a>
                     </li>
                 </ul>
+                
+                {/* Adding the color pallete buttons  */}
+                {colorArr.map((Color, index) => <Button key={index+1} toggle ={props.toggle} ColorName={Color} />)}
+
 
                 {/* Added The Switch which toogles dark mode */}
                 <div className="form-check form-switch">                                                            
